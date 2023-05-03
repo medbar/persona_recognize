@@ -30,7 +30,7 @@ if [ ! -f $exp_dir/.done.vad ] ; then
     python to_json.py --out_file $exp_dir/wavs.json \
         $(ls $data_dir/*.wav)
 
-    python examples/asr/speech_classification/vad_infer.py \
+    python NeMo/examples/asr/speech_classification/vad_infer.py \
         --config-path ../conf/vad/ \
         --config-name=vad_inference_postprocessing.yaml \
         dataset=$exp_dir/wavs.json \
